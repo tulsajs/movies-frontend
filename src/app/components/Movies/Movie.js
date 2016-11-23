@@ -9,7 +9,6 @@ const Movie = ({ movie }) => {
       <div className='movie__title'>{movie.title}</div>
       <div className='movie__release-date'>Release Date: {movie.release_date}</div>
       <div className='movie__overview'>{movie.overview}</div>
-      
     </div>
   );
 };

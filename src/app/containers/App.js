@@ -4,7 +4,7 @@ export default class App extends Component {
   render () {
     const { header, main } = this.props;
     return (
-      <div className="container">
+      <div className='container'>
         {header}
         {main}
       </div>

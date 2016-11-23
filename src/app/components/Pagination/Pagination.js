@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { range, take, takeRight } from 'lodash';
+import { range } from 'lodash';
 import uuid from 'uuid';
 
 export default class Pagination extends Component {
