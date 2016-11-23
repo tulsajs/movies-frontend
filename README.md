@@ -25,6 +25,8 @@ In order to successfully run this project from your local machine, you'll need t
   ```
 
 3. Signup for an account with themoviedb @ `https://www.themoviedb.org/account/signup?language=en`
+  [step1]: http://prntscr.com/daujtd "Account Settings"
+  [step2]: http://prntscr.com/daul9i "Account Settings"
 
 4. Once signed up go to your account -> API and copy your API Key(v3 auth)
 
