@@ -1,4 +1,4 @@
-# React/Redux Scaffold
+# TulsaSJ Redux Workshop
 
 ### Dev Installation
 
@@ -15,7 +15,7 @@ In order to successfully run this project from your local machine, you'll need t
 1. Clone repo
 
 ```
-git clone
+git clone `https://github.com/tulsajs/redux-workshop.git`
 ```
 
 2. Install npm dependencies
