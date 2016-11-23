@@ -1,0 +1,53 @@
+// Colors
+// ========================================
+
+  // Black
+  $black-base:   #272F3A;
+  $black-dark:   #161D27;
+
+  // Blue
+  $blue-base:    #008DF2;
+
+  $blue-alt:     #0069A5;
+
+  // Green
+  $green-base:   #B6C977;
+  $green-dark:   #899C4C;
+
+  // Grey
+  $grey-base:    #EFF4F7;
+  $grey-dark:    #CED7DC;
+
+  $grey-alt:     #5F7281;
+  $grey-alt-2:   #FAFBFC;
+
+  // Orange
+  $orange-base:  #EDAC59;
+  $orange-dark:  #C6832C;
+
+  // Red
+  $red-base:     #DC7B7D;
+  $red-dark:     #A74446;
+
+  // White
+  $white-base:   #FFFFFF;
+
+
+  //MAIN PALETTE LIST
+  $colors: (
+    black-base:    $black-base,
+    black-dark:    $black-dark,
+    blue-base:     $blue-base,
+    blue-alt:      $blue-alt,
+    green-base:    $green-base,
+    green-dark:    $green-dark,
+    grey-base:     $grey-base,
+    grey-dark:     $grey-dark,
+    grey-alt:      $grey-alt,
+    grey-alt-2:    $grey-alt-2,
+    orange-base:   $orange-base,
+    orange-dark:   $orange-dark,
+    red-base:      $red-base,
+    red-dark:      $red-dark,
+    white-base:    $white-base
+  );

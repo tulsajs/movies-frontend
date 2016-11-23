@@ -1,0 +1,9 @@
+// Alert Variables
+// ========================================
+
+$alerts: (
+  success   $green-base  $green-dark,
+  danger    $orange-base $orange-dark,
+  warning   $red-base    $red-dark,
+  default   $grey-base   $grey-dark
+);

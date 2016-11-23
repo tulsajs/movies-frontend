@@ -1,0 +1,54 @@
+// Grid Stylesheet
+// ========================================
+
+// Structure
+.container { @include outer-container }
+
+.row { @include row }
+
+@each $column in $columns {
+  $column-name:   nth($column, 1);
+  $column-count:  nth($column, 2);
+
+  // Columns
+  .#{$column-name}-columns__s {
+    // Refactor to take a more mobile-first approach
+    @media only screen and (max-width: 45em) {
+      @include span-columns($column-count of 12);
+    }
+  }
+
+  .#{$column-name}-columns__m {
+    @include media($tablet) {
+      @include span-columns($column-count of 12);
+    }
+  }
+
+  .#{$column-name}-columns__l {
+    @include media($tablet-landscape) {
+      @include span-columns($column-count of 12);
+    }
+  }
+
+
+  // Columns Offset
+  .#{$column-name}-offset__s {
+    // Refactor to take a more mobile-first approach
+    @media only screen and (max-width: 45em) {
+      @include shift($column-count of 12);
+    }
+  }
+
+  .#{$column-name}-offset__m {
+    @include media($tablet) {
+      @include shift($column-count of 12);
+    }
+  }
+
+  .#{$column-name}-offset__l {
+    @include media($tablet-landscape) {
+      @include shift($column-count of 12);
+    }
+  }
+
+}

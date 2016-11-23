@@ -1,0 +1,105 @@
+// Base Layout Stylesheet
+// ========================================
+
+// Variables
+$img-spread:            0 2px 15px 1px;
+$img-shadow:            rgba(95, 114, 129, 0.4);
+
+// Global Styles
+html,
+body {
+  overflow-x: hidden;
+
+  &.is-fixed {
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+
+    @include media($tablet) {
+      @include position(absolute);
+    }
+  }
+}
+
+
+// Clears + Resets
+.clear { clear: both; }
+
+@each $reset in $resets {
+  $position:  nth($reset, 1);
+  $zero:      nth($reset, 2);
+
+  .reset-margin-#{$position} {
+    margin-#{$position}: $zero !important;
+  }
+
+  .reset-padding-#{$position} {
+    padding-#{$position}: $zero !important;
+  }
+}
+
+.reset-padding { padding: 0 !important; }
+.reset-margin  { margin:  0 !important; }
+
+
+// Base image
+.image--base {
+  @include rem(padding, $spacer-echo);
+  background-color: $white-base;
+  border: 1px solid $grey-dark;
+  border-radius: 2px;
+  display: inline-block;
+
+  img { width: 100%; }
+}
+
+.image--full {
+  width: 100%;
+}
+
+.image--shadow {
+  @include box-shadow($img-spread, $img-shadow);
+}
+
+
+// Spacers
+@each $spacer in $spacers {
+  $type:  nth($spacer, 1);
+  $value: nth($spacer, 2);
+
+  .margin__#{$type}-bottom { margin-bottom: $value; }
+  .margin__#{$type}-left   { margin-left:   $value; }
+  .margin__#{$type}-right  { margin-right:  $value; }
+  .margin__#{$type}-top    { margin-top:    $value; }
+
+  .margin__.#{$type} { margin:  $value }
+  .padding__#{$type} { padding: $value }
+}
+
+
+// Divider
+hr,
+.horizontal-divider {
+  @include rem(margin, $spacer-charlie 0);
+  border: none;
+  border-bottom: 1px solid $grey-base;
+  display: block;
+}
+
+
+// Position
+.relative { @include position(relative); }
+
+
+// Floats
+.float--left {
+  @include media($tablet) { float: left; }
+} // This should rarely be used.
+
+.float--right {
+  @include media($tablet) { float: right; }
+}
+
+.float--right-mobile {
+  float: right;
+}

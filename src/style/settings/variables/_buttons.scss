@@ -1,0 +1,25 @@
+// Buttons
+// ========================================
+
+$buttons: (
+  'alpha': (
+    $blue-base,
+    $white-base
+  ),
+  'bravo': (
+    $green-base,
+    $white-base
+  ),
+  'charlie': (
+    $red-base,
+    $white-base
+  ),
+  'delta': (
+    $orange-base,
+    $white-base
+  ),
+  'default': (
+    $grey-dark,
+    $grey-alt
+  )
+);

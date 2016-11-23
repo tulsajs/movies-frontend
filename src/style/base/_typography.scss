@@ -1,0 +1,111 @@
+// Base Typography
+// ========================================
+
+html{
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  @include font-type($primary-sans-serif, normal, 400);
+  @include s-foxtrot;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include font-type($primary-sans-serif, normal, 400);
+  @include rem(margin-bottom, 18px);
+  color: $black-base;
+  line-height: 1.25;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 { font-size: $font-size-base * 4.25; }
+h2 { font-size: $font-size-base * 3.25; }
+h3 { font-size: $font-size-base * 2.75; }
+h4 { font-size: $font-size-base * 1.75; }
+h5 { font-size: $font-size-base * 1.55; }
+h6 { font-size: $font-size-base; }
+
+.header__label {
+  @include rem(margin-bottom, $spacer-delta);
+  @include s-hotel;
+  color: $grey-alt;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+p {
+  @include font-type($primary-sans-serif, normal, 400);
+  @include s-foxtrot;
+  @include rem(margin-bottom, 12px);
+  color: $black-base;
+  line-height: $base-line-height;
+}
+
+li,
+dd{
+  @include s-golf;
+  @include rem(margin-top, 3px);
+  line-height: normal;
+}
+
+a {
+  @include font-type(inherit, normal, 400);
+  @include transition(all 0.3s ease-in-out);
+  color: inherit;
+  text-decoration: none;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+.footnote {
+  @include s-hotel;
+  color: $grey-alt;
+  font-style: italic;
+}
+
+// Type Align
+// Text Alignment
+@each $text-alignment in $text-alignments {
+  $name:   nth($text-alignment, 1);
+  $align:  nth($text-alignment, 2);
+
+  .text--#{$name} {
+    text-align: $align;
+  }
+}
+
+// Type Colors
+@each $name, $tones in $type-colors {
+  $tone-color: nth($tones, 1);
+
+  .text--#{$name} {
+    color: $tone-color !important;
+  };
+}
+
+// Type Sizes
+.text--small {
+  @include s-hotel;
+}
+
+// Type Styles
+.text--uppercase{ text-transform: uppercase }
+
+// Type Weight
+strong,
+.text--heavy { @include font-type($primary-sans-serif, normal, 700); }
+
+.text--light { @include font-type($primary-sans-serif, normal, 400); }
