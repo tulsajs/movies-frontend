@@ -32,11 +32,11 @@ npm install
 
 6. Run the local server
 
-Build the project and start a local dev server with this command:
+  Build the project and start a local dev server with this command:
 
-```
-npm run server
-```
+  ```
+  npm run server
+  ```
 
 7. You should at this point be able to enter in a movie name and search for it.
 
