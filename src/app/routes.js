@@ -1,9 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router';
-import { App, MainPage, Header } from './containers';
+import App from './containers/App';
 
 export default (
-  <Route component={App}>
-    <Route path='*' components={{header: Header, main: MainPage}} />
-  </Route>
+  <Route path='*' component={App} />
 );
