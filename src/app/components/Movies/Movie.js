@@ -6,9 +6,10 @@ const Movie = ({ movie }) => {
   return (
     <div className='movie'>
       <img width='250' src={movie.poster_path ? poster + movie.poster_path : placeholder} />
-      <div>{movie.title}</div>
-      <div className='overview'>{movie.overview}</div>
-      <div>{movie.release_date}</div>
+      <div className='movie__title'>{movie.title}</div>
+      <div className='movie__release-date'>Release Date: {movie.release_date}</div>
+      <div className='movie__overview'>{movie.overview}</div>
+      
     </div>
   );
 };

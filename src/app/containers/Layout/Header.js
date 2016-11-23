@@ -6,7 +6,7 @@ import * as moviesActions from '../../actions/moviesActions';
 class Header extends Component {
   render () {
     return (
-      <header>
+      <header className='header'>
         <div className='header-nav'>
           <MovieSearch {...this.props} />
         </div>

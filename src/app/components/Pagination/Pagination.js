@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
-import { range } from 'lodash';
+import { range, take, takeRight } from 'lodash';
 import uuid from 'uuid';
 
 export default class Pagination extends Component {
+  selectPage (page) {
+    this.props.actions.goToPage(page);
+  }
+
   nextPage () {
     const { current_page, total_pages } = this.props.pagination;
 
@@ -21,11 +25,12 @@ export default class Pagination extends Component {
 
   renderPagination () {
     const { current_page, total_pages } = this.props.pagination;
-    const pages = range(total_pages);
+    let pages = range(total_pages).map(page => page + 1);
+    pages = [ current_page - 2, current_page - 1, current_page, current_page + 1, current_page + 2 ];
     return pages.map(number => {
-      number += 1;
+      if (number <= 0 || number > total_pages) return;
       return (
-        <button className={current_page === number ? 'picked' : null} key={uuid.v1()} onClick={() => this.props.actions.goToPage(number)}>{number}</button>
+        <button className={current_page === number ? 'isActive' : null} key={uuid.v1()} onClick={() => this.props.actions.goToPage(number)}>{number}</button>
       );
     });
   }
@@ -33,13 +38,13 @@ export default class Pagination extends Component {
   render () {
     const { total_pages } = this.props.pagination;
     return (
-      <div>
+      <div className='pagination'>
       { total_pages > 1
-           ? <pagination>
-               <button onClick={::this.previousPage}>Previous</button>
+           ? <div className='pagination__container'>
+               <button onClick={() => this.selectPage(1)}>First</button>
                {this.renderPagination()}
-               <button onClick={::this.nextPage}>Next</button>
-             </pagination>
+               <button onClick={() => this.selectPage(total_pages)}>Last</button>
+             </div>
            : null }
       </div>
     );

@@ -13,7 +13,7 @@ export default class Movies extends Component {
 
   render () {
     return (
-      <div className='movies'>
+      <div className='movies_container'>
         {this.renderMovies()}
       </div>
     );
