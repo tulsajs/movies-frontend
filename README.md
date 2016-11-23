@@ -6,8 +6,8 @@
 
 In order to successfully run this project from your local machine, you'll need the following software installed:
 
-* Git
-* Node - v5.x
+* [Git](https://git-scm.com/)
+* [Node - v5.x](https://nodejs.org/en/download/)
 * npm (this should come packaged with Node)
 
 #### Install steps
@@ -40,4 +40,6 @@ In order to successfully run this project from your local machine, you'll need t
 
 7. You should at this point be able to enter in a movie name and search for it.
 
-And then head over to [localhost:8080](http://localhost:8080/) to see the project live.
+  And then head over to [localhost:8080](http://localhost:8080/) to see the project live.
+
+8. Once you have the project working you can checkout the `starter` branch using `git checkout starter`
