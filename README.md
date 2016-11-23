@@ -14,15 +14,15 @@ In order to successfully run this project from your local machine, you'll need t
 
 1. Clone repo
 
-```
-git clone `https://github.com/tulsajs/redux-workshop.git`
-```
+  ```
+  git clone `https://github.com/tulsajs/redux-workshop.git`
+  ```
 
 2. Install npm dependencies
 
-```
-npm install
-```
+  ```
+  npm install
+  ```
 
 3. Signup for an account with themoviedb @ `https://www.themoviedb.org/account/signup?language=en`
 
