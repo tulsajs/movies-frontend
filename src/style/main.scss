@@ -59,7 +59,7 @@
   .movie {
     @include span-columns(3);
     padding: 20px 0;
-    min-height: 690px;
+    min-height: 716px;
     &:nth-child(4n) {
       margin-right: 0;
     }
