@@ -8,7 +8,7 @@ const configureStore = initialState => {
   let enhancer;
   const middleware = applyMiddleware(thunk, routerMiddleware(browserHistory));
 
-  if (process.env.NODE_ENV !== 'production') {
+  if (process.env.REACT_APP_ENV !== 'production') {
     var { persistState } = require('redux-devtools');
     let getDebugSessionKey = function() {
       // By default we try to read the key from ?debug_session=<key> in the address bar
