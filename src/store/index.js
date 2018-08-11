@@ -1,9 +1,12 @@
 import { createStore, compose, applyMiddleware } from 'redux';
 import rootReducer from '../reducers';
-import { persistState } from 'redux-devtools';
 import thunk from 'redux-thunk';
 import { routerMiddleware } from 'react-router-redux';
 import { browserHistory } from 'react-router';
+
+if (process.env.NODE_ENV !== 'production') {
+  var { persistState } = require('redux-devtools');
+}
 
 const configureStore = initialState => {
   let enhancer;
