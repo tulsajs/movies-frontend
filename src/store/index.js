@@ -4,15 +4,12 @@ import thunk from 'redux-thunk';
 import { routerMiddleware } from 'react-router-redux';
 import { browserHistory } from 'react-router';
 
-if (process.env.NODE_ENV !== 'production') {
-  var { persistState } = require('redux-devtools');
-}
-
 const configureStore = initialState => {
   let enhancer;
   const middleware = applyMiddleware(thunk, routerMiddleware(browserHistory));
 
   if (process.env.NODE_ENV !== 'production') {
+    var { persistState } = require('redux-devtools');
     let getDebugSessionKey = function() {
       // By default we try to read the key from ?debug_session=<key> in the address bar
       const matches = window.location.href.match(/[?&]debug_session=([^&]+)\b/);
