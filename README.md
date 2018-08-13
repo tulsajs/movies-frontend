@@ -1,6 +1,6 @@
 # TulsaJS Redux Workshop
 
-[![CircleCI](https://circleci.com/gh/tulsajs/movies-frontend/tree/master.svg?style=svg)](https://circleci.com/gh/tulsajs/movies-frontend/tree/master)
+[![CircleCI](https://circleci.com/gh/tulsajs/movies-frontend/tree/master.svg?style=svg)](https://circleci.com/gh/tulsajs/movies-frontend/tree/master) [![Maintainability](https://api.codeclimate.com/v1/badges/f9926be2f572064b56d1/maintainability)](https://codeclimate.com/github/tulsajs/movies-frontend/maintainability)
 
 A demo version of this app is running at [movies.apps.tulsajs.com](https://movies.apps.tulsajs.com). Commits to the `master` branch auto-deploy to that URL.
 
