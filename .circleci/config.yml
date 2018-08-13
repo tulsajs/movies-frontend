@@ -31,10 +31,11 @@ jobs:
       # - run: yarn test
 
       # Deployment to Dokku
-      - run:
+      - deploy:
           name: Deploy to Dokku
-          branch: master
           command: |
-            ssh-keyscan -H apps.tulsajs.com >> ~/.ssh/known_hosts
-            git remote add production dokku@apps.tulsajs.com:tulsajs-movies
-            git push production master --force
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              ssh-keyscan -H apps.tulsajs.com >> ~/.ssh/known_hosts
+              git remote add production dokku@apps.tulsajs.com:tulsajs-movies
+              git push production master --force
+            fi
