@@ -33,6 +33,7 @@ jobs:
       # Deployment to Dokku
       - run:
           name: Deploy to Dokku
+          branch: master
           command: |
             ssh-keyscan -H apps.tulsajs.com >> ~/.ssh/known_hosts
             git remote add production dokku@apps.tulsajs.com:tulsajs-movies
