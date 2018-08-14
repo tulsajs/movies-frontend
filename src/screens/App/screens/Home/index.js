@@ -27,16 +27,21 @@ export default class Home extends Component {
   updateSearch = search => this.setState({ search, page: 1 });
   updatePage = page => this.setState({ page });
 
-  render() {
-    console.log(this.state);
-    return (
-      <Flex
-        flexDirection="column"
-        justifyContent="center"
-        alignItems="center"
-        p={3}>
-        <Search updateSearch={this.updateSearch} />
+  Wrapper = ({ children }) => (
+    <Flex
+      flexDirection="column"
+      justifyContent="center"
+      alignItems="center"
+      p={3}>
+      {children}
+    </Flex>
+  );
 
+  render() {
+    const { Wrapper } = this;
+    return (
+      <Wrapper>
+        <Search updateSearch={this.updateSearch} />
         <Query
           query={GET_MOVIES}
           variables={{ query: this.state.search, page: this.state.page }}>
@@ -61,7 +66,7 @@ export default class Home extends Component {
             );
           }}
         </Query>
-      </Flex>
+      </Wrapper>
     );
   }
 }
