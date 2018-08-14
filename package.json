@@ -16,16 +16,14 @@
     "react-emotion": "^9.2.6",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
-    "styled-system": "^3.0.2"
+    "styled-system": "^3.0.2",
+    "react-app-rewire-emotion": "^4.0.0",
+    "react-app-rewired": "^1.5.2"
   },
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test --env=jsdom",
     "eject": "react-scripts eject"
-  },
-  "devDependencies": {
-    "react-app-rewire-emotion": "^4.0.0",
-    "react-app-rewired": "^1.5.2"
   }
 }
