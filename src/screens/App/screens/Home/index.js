@@ -4,7 +4,8 @@ import { Query } from 'react-apollo';
 import { Flex, Box } from 'BuildingBlocks';
 import Search from './components/Search';
 import Pagination from './components/Pagination';
-import Movie from './components/Movie';
+
+import MovieList from 'MovieList';
 
 const GET_MOVIES = gql`
   query MoviesList($query: String, $page: Int) {
@@ -56,12 +57,7 @@ export default class Home extends Component {
                   totalPages={moviesList.totalPages}
                   updatePage={this.updatePage}
                 />
-
-                <Flex flexWrap="wrap" justifyContent="flex-start">
-                  {moviesList.movies.map(movie => (
-                    <Movie movie={movie} key={movie.id} />
-                  ))}
-                </Flex>
+                <MovieList movies={moviesList.movies} />
               </Fragment>
             );
           }}
